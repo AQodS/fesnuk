@@ -7,6 +7,8 @@ const quotes = [
   "Ngefix bug itu opsional, nyalahin orang itu solusi."
 ];
 
-export const fesnukQuote = () => {
+const fesnukQuote = () => {
   return quotes[Math.floor(Math.random() * quotes.length)];
 };
+
+export default fesnukQuote;

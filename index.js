@@ -1,6 +1,7 @@
-import { fesnukBlame } from "./utils/blame.js";
-import { fesnukQuote } from "./utils/quotes.js";
-import { imphnen } from "./utils/imphnen.js";
+import fesnukBlame from "./utils/blame.js";
+import fesnukQuote from "./utils/quotes.js";
+import fesnukError from "./utils/error.js";
+import imphnen from "./utils/imphnen.js";
 import { fesnukDebug, motivateNgoding, whyItFails } from "./utils/motivation.js";
 
 const getRandomName = () => {
@@ -20,15 +21,15 @@ const Fesnuk = (mode = "random", message = "") => {
       return whyItFails();
     case "blame":
       return fesnukBlame(getRandomName());
-    // case "error":
-    //   fesnukError(message || "Daripada stress debug, mending scroll fesnuk");
-    //   break;
     case "imphnen":
       return imphnen();
+    case "error":
+      fesnukError(message || "Daripada stress debug, mending scroll fesnuk");
+      break;
     default:
-      const funcs = [motivateNgoding, fesnukQuote, fesnukDebug, whyItFails, fesnukBlame, imphnen];
+      const funcs = [motivateNgoding(), fesnukQuote(), fesnukDebug(), whyItFails(), fesnukBlame(getRandomName()), imphnen()];
       const randomFunc = funcs[Math.floor(Math.random() * funcs.length)];
-      return randomFunc();
+      return randomFunc;
   }
 };
 
