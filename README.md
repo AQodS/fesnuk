@@ -1,7 +1,7 @@
 # fesnuk
 
 Error handling untuk programmer yang malas ngoding.  
-Terinspirasi oleh grup di Fesnuk (IMPHNEN).
+Terinspirasi oleh grup Fesnuk (IMPHNEN).
 
 ## Install
 

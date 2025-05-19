@@ -38,6 +38,11 @@ declare module "fesnuk" {
   export function imphnen(): string;
 
   /**
+   * Menggoda user untuk buka Facebook.
+   */
+  export function FesnukOpen(): Promise<void> | string;
+
+  /**
    * Fungsi utama Fesnuk yang bisa jalanin banyak mode.
    * @param mode Mode aksi: "motivate", "quote", "debug", "why", "blame", "imphnen", "error", atau "random"
    * @param message Pesan tambahan (digunakan di mode "error")
@@ -51,6 +56,7 @@ declare module "fesnuk" {
       | "why"
       | "blame"
       | "imphnen"
+      | "open"
       | "error"
       | "random",
     message?: string

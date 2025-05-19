@@ -2,6 +2,7 @@ import fesnukBlame from "./utils/blame.js";
 import fesnukQuote from "./utils/quotes.js";
 import fesnukError from "./utils/error.js";
 import imphnen from "./utils/imphnen.js";
+import FesnukOpen from "./utils/open.js";
 import { fesnukDebug, motivateNgoding, whyItFails } from "./utils/motivation.js";
 
 const getRandomName = () => {
@@ -23,6 +24,8 @@ const Fesnuk = (mode = "random", message = "") => {
       return fesnukBlame(getRandomName());
     case "imphnen":
       return imphnen();
+    case "open":
+      return FesnukOpen();
     case "error":
       fesnukError(message || "Daripada stress debug, mending scroll fesnuk");
       break;
@@ -32,5 +35,7 @@ const Fesnuk = (mode = "random", message = "") => {
       return randomFunc;
   }
 };
+
+export { fesnukBlame, fesnukQuote, fesnukError, imphnen, fesnukDebug, motivateNgoding, whyItFails, FesnukOpen };
 
 export default Fesnuk;
