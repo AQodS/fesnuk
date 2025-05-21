@@ -1,4 +1,4 @@
-const motivateNgoding = () => {
+const MotivateNgoding = () => {
   const lines = [
     "Ayo semangat! Kalau gagal, tinggal salahin tim lain.",
     "Kamu hebat. Tapi error-nya lebih hebat.",
@@ -8,7 +8,7 @@ const motivateNgoding = () => {
   return lines[Math.floor(Math.random() * lines.length)];
 };
 
-const fesnukDebug = () => {
+const FesnukDebug = () => {
   const tips = [
     "Coba restart komputer. Atau hidupmu.",
     "Tutup laptop, buka Fesnuk.",
@@ -18,7 +18,7 @@ const fesnukDebug = () => {
   return tips[Math.floor(Math.random() * tips.length)];
 };
 
-const whyItFails = () => {
+const WhyItFails = () => {
   const reasons = [
     "Karena kamu belum cukup menderita.",
     "Karena API-nya insecure, kayak hubunganmu.",
@@ -28,4 +28,4 @@ const whyItFails = () => {
   return reasons[Math.floor(Math.random() * reasons.length)];
 };
 
-export { motivateNgoding, fesnukDebug, whyItFails };
+export { MotivateNgoding, FesnukDebug, WhyItFails };

@@ -1,9 +1,9 @@
-import fesnukBlame from "./utils/blame.js";
-import fesnukQuote from "./utils/quotes.js";
-import fesnukError from "./utils/error.js";
-import imphnen from "./utils/imphnen.js";
+import FesnukBlame from "./utils/blame.js";
+import FesnukQuote from "./utils/quotes.js";
+import FesnukError from "./utils/error.js";
+import Imphnen from "./utils/imphnen.js";
 import FesnukOpen from "./utils/open.js";
-import { fesnukDebug, motivateNgoding, whyItFails } from "./utils/motivation.js";
+import { FesnukDebug, MotivateNgoding, WhyItFails } from "./utils/motivation.js";
 
 const getRandomName = () => {
   const names = ['Budi', 'Agus', 'Santi', 'Team Backend', 'Team Frontend', 'Div Infrastruktur'];
@@ -13,29 +13,29 @@ const getRandomName = () => {
 const Fesnuk = (mode = "random", message = "") => {
   switch (mode) {
     case "motivate":
-      return motivateNgoding();
+      return MotivateNgoding();
     case "quote":
-      return fesnukQuote();
+      return FesnukQuote();
     case "debug":
-      return fesnukDebug();
+      return FesnukDebug();
     case "why":
-      return whyItFails();
+      return WhyItFails();
     case "blame":
-      return fesnukBlame(getRandomName());
+      return FesnukBlame(getRandomName());
     case "imphnen":
-      return imphnen();
+      return Imphnen();
     case "open":
       return FesnukOpen();
     case "error":
-      fesnukError(message || "Daripada stress debug, mending scroll fesnuk");
+      FesnukError(message || "Daripada stress debug, mending scroll fesnuk");
       break;
     default:
-      const funcs = [motivateNgoding(), fesnukQuote(), fesnukDebug(), whyItFails(), fesnukBlame(getRandomName()), imphnen()];
+      const funcs = [MotivateNgoding(), FesnukQuote(), FesnukDebug(), WhyItFails(), FesnukBlame(getRandomName()), Imphnen()];
       const randomFunc = funcs[Math.floor(Math.random() * funcs.length)];
       return randomFunc;
   }
 };
 
-export { fesnukBlame, fesnukQuote, fesnukError, imphnen, fesnukDebug, motivateNgoding, whyItFails, FesnukOpen };
+export { FesnukBlame, FesnukQuote, FesnukError, Imphnen, FesnukDebug, MotivateNgoding, WhyItFails, FesnukOpen };
 
 export default Fesnuk;

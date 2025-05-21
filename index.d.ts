@@ -4,38 +4,38 @@ declare module "fesnuk" {
    * @param message Pesan error (opsional), default: "Daripada stress debug, mending scroll fesnuk"
    * @throws Error dengan pesan kocak.
    */
-  export function fesnukError(message?: string): never;
+  export function FesnukError(message?: string): never;
 
   /**
    * Mengambil kutipan motivasi ngoding random.
    */
-  export function motivateNgoding(): string;
+  export function MotivateNgoding(): string;
 
   /**
    * Mengambil kutipan quote ngoding random.
    */
-  export function fesnukQuote(): string;
+  export function FesnukQuote(): string;
 
   /**
    * Menampilkan debug message khas fesnuk.
    */
-  export function fesnukDebug(): string;
+  export function FesnukDebug(): string;
 
   /**
    * Menampilkan alasan kenapa program gagal.
    */
-  export function whyItFails(): string;
+  export function WhyItFails(): string;
 
   /**
    * Menyalahkan seseorang atau tim dengan gaya khas fesnuk.
    * @param name Nama yang mau disalahkan.
    */
-  export function fesnukBlame(name: string): string;
+  export function FesnukBlame(name: string): string;
 
   /**
    * Menggoda user untuk buka grup Facebook IMPHNEN.
    */
-  export function imphnen(): string;
+  export function Imphnen(): string;
 
   /**
    * Menggoda user untuk buka Facebook.

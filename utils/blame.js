@@ -1,5 +1,5 @@
-const fesnukBlame = (name) => {
+const FesnukBlame = (name) => {
   return `💣 Ini pasti gara-gara ${name}. Udah biasa.`;
 };
 
-export default fesnukBlame;
+export default FesnukBlame;

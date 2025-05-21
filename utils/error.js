@@ -1,5 +1,5 @@
-const fesnukError = (message) => {
+const FesnukError = (message) => {
   throw new Error(`Haha tuh kan error, ngapain ngoding mending scroll fesnuk 😩: ${message}`);
 };
 
-export default fesnukError;
+export default FesnukError;
